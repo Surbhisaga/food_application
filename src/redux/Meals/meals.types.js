@@ -1,0 +1,8 @@
+const mealsTypes ={
+    ADD_NEW_MEAL_START:'ADD_NEW_MEAL_START',
+    FETCH_MEAL_START:'FETCH_MEAL_START',
+    SET_MEALS:'SET_MEALS',
+    DELETE_MEAL_START:'DELETE_MEAL_START'
+}
+
+export default mealsTypes;
