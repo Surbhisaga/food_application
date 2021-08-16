@@ -5,6 +5,7 @@ import { fetchMealsStart } from './../../redux/Meals/meals.actions';
 import FormSelect from './../forms/FormSelect';
 import Meal from './Meal'
 import './styles.scss'
+import {firestore} from './../../firebase/utils'
 
 const mapState = ({ mealsData }) => ({
     meals: mealsData.meals
@@ -15,7 +16,7 @@ const MealResults = ({ }) => {
     const history = useHistory();
     const { filterType } = useParams();
     const { meals } = useSelector(mapState);
-    
+
     useEffect(() => {
         dispatch(
             fetchMealsStart({ filterType })
@@ -54,9 +55,15 @@ const MealResults = ({ }) => {
         handleChange: handleFilter
     };
 
+
     return (
         <div className="meals">
-            <h1>Search meals </h1>
+
+            <div>
+                <h1>Search meals </h1>
+                {/* <input type="text" id="answer" placeholder="Type here...."></input>
+                <button>Go</button> */}
+            </div>
 
             <FormSelect {...configFilters} />
             <div className="mealResult">

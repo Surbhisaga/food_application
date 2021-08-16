@@ -3,6 +3,7 @@ import { auth, handleUserProfile, getCurrentUser, GoogleProvider } from './../..
 import userTypes from './user.types';
 import { signInSuccess, signOutUserSuccess, resetPasswordSuccess, userError } from './user.actions';
 import { handleResetPasswordAPI } from './user.helper';
+import { toast } from 'react-toastify';
 
 export function* getSnapshotFromUserAuth(user, additionalData = {}) {
   try {
@@ -14,7 +15,6 @@ export function* getSnapshotFromUserAuth(user, additionalData = {}) {
         ...snapshot.data()
       })
     );
-
   } catch (err) {
     // console.log(err);
   }
@@ -24,7 +24,6 @@ export function* emailSignIn({ payload: { email, password } }) {
   try {
     const { user } = yield auth.signInWithEmailAndPassword(email, password);
     yield getSnapshotFromUserAuth(user);
-
   } catch (err) {
     // console.log(err);
   }
@@ -55,7 +54,6 @@ export function* signOutUser() {
     yield put(
       signOutUserSuccess()
     )
-
   } catch (err) {
     // console.log(err);
   }

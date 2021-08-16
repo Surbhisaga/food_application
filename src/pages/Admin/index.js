@@ -35,7 +35,7 @@ const Admin = props => {
 
   const configModal = {
     hideModal,
-    toggleModal
+    toggleModal,
   };
 
   const resetForm = () => {
@@ -78,7 +78,7 @@ const Admin = props => {
   return (
     <div className="admin">
 
-      <div className="callToActions">
+      <div className="callToActions" >
         <ul>
           <li>
             <Button onClick={() => toggleModal()}>

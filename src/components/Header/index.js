@@ -32,13 +32,8 @@ const Header = props => {
                 <nav>
                     <ul>
                         <li>
-                            <Link to="/">
-                                Home
-                            </Link>
-                        </li>
-                        <li>
                             <Link to="/search">
-                                Search
+                                Dishes
                             </Link>
                         </li>
                     </ul>
@@ -54,7 +49,7 @@ const Header = props => {
                             </li>,
                             <li>
                                 <Link to="/admin">
-                                    admin
+                                    meal
                                 </Link>
                             </li>,
                             <li>

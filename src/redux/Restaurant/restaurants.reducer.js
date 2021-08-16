@@ -9,7 +9,7 @@ const restaurantsReducer = (state = INITIAL_STATE, action) => {
         case restaurantsTypes.SET_RESTAURANTS:
             return {
                 ...state,
-                meals: action.payload
+                restaurants: action.payload
             }
         default:
             return state;

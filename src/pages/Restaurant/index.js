@@ -118,7 +118,7 @@ const Restaurant = props => {
                 </div>
             </Modal>
 
-            <div className="manageProducts">
+            <div className="manageRestaurants">
 
                 <table border="0" cellPadding="0" cellSpacing="0">
                     <tbody>

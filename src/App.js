@@ -49,19 +49,25 @@ const App = props => {
           </MainLayout>
         )} />
         <Route path="/cart" render={() => (
-          <MainLayout>
-            <Cart />
-          </MainLayout>
+          <WithAuth>
+            <MainLayout>
+              <Cart />
+            </MainLayout>
+          </WithAuth>
         )} />
         <Route path="/payment" render={() => (
-          <MainLayout>
-            <Payment />
-          </MainLayout>
+          <WithAuth>
+            <MainLayout>
+              <Payment />
+            </MainLayout>
+          </WithAuth>
         )} />
         <Route path="/orderPlaced" render={() => (
-          <MainLayout>
-            <OrderPlaced />
-          </MainLayout>
+          <WithAuth>
+            <MainLayout>
+              <OrderPlaced />
+            </MainLayout>
+          </WithAuth>
         )} />
         <Route exact path="/registartion" render={() => (
           <MainLayout >

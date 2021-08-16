@@ -86,6 +86,7 @@ const PaymentDetails = () => {
                         handleChange={evt => setRecipientName(evt.target.value)}
                         value={recipientName}
                         type="text"
+                        required
                     />
 
                     <FormInput
@@ -95,6 +96,7 @@ const PaymentDetails = () => {
                         ha
                         value={address.line1}
                         type="text"
+                        required
                     />
 
                     <FormInput
@@ -110,6 +112,7 @@ const PaymentDetails = () => {
                         name="city"
                         value={address.city}
                         type="text"
+                        required
                     />
                     <FormInput
                         placeholder="State"
@@ -117,13 +120,15 @@ const PaymentDetails = () => {
                         name="state"
                         value={address.state}
                         type="text"
+                        required
                     />
                     <FormInput
                         placeholder="Phone Number"
                         handleChange={evt => handleAddress(evt)}
                         name="number"
                         value={address.number}
-                        type="text"
+                        type="number"
+                        required
                     />
                     <FormInput
                         placeholder="Postal code"
@@ -131,6 +136,7 @@ const PaymentDetails = () => {
                         name="postal_code"
                         value={address.postal_code}
                         type="text"
+                        required
                     />
                 </div>
                 {/* 
@@ -162,10 +168,11 @@ const PaymentDetails = () => {
                     </div>
                 </div> */}
                 <br /><hr /><hr /><br />
-                <Button type="submit">
+                <div className="orderNow">
+                <Button type="submit" >
                     Order Now
                 </Button>
-
+</div>
             </form>
         </div>
     );

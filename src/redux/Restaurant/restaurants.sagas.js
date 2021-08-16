@@ -25,12 +25,13 @@ export function* onAddRestaurantStart() {
 }
 
 
-export function* fetchRestaurants() {
+export function* fetchRestaurants(payload) {
     try {
-        const restaurants = yield handleFetchRestaurants();
+        const restaurants = yield handleFetchRestaurants({payload});
         yield put(
             setRestaurant(restaurants)
         );
+        console.log("123",restaurants);
     } catch (err) {
         // console.log(err)
     }
